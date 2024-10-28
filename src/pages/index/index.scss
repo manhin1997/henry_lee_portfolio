@@ -1,0 +1,33 @@
+.gradient-bg {
+  background: linear-gradient(270deg, #031344d5, #440303c7);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.sections {
+  position: relative;
+  top: var(--navbar-height);
+  height: calc(100vh - var(--navbar-height));
+  background-color: transparent;
+  scroll-snap-type: y proximity;
+  overflow: scroll;
+  scroll-behavior: smooth;
+
+  > * {
+    scroll-snap-align: start;
+    width: 100vw;
+    min-height: calc(100vh - var(--navbar-height));
+  }
+}

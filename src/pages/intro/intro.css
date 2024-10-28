@@ -1,0 +1,26 @@
+$border-width: 50px;
+.intro {
+  .expand {
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    width: 75px;
+    height: 75px;
+    left: calc(50% - 37.5px);
+    animation-name: icon_opacity;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes icon_opacity {
+    0% {
+      opacity: 0%;
+    }
+    50% {
+      opacity: 100%;
+    }
+    100% {
+      opacity: 0%;
+    }
+  }
+}

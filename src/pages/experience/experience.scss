@@ -1,0 +1,355 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.scroll-spacing {
+  height: var(--navbar-height);
+}
+
+.show-mobile {
+  display: none;
+}
+
+.title-port {
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0px auto;
+  padding: 15px 0;
+  overflow-y: hidden;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.point {
+  padding: 15px 30px;
+  position: relative;
+  background: inherit;
+  width: 50%;
+}
+
+.point.left {
+  left: 0;
+  text-align: right;
+}
+
+.point.right {
+  left: 50%;
+  text-align: left;
+}
+
+.point::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -8px;
+  background: #ffffff;
+  border: 2px solid #595959;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.point.right::after {
+  left: -8px;
+}
+
+.point::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: #ffffff;
+  z-index: 1;
+}
+
+.point.right::before {
+  left: 8px;
+}
+
+.point .date {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 26px);
+  text-align: left;
+  font-size: 22px;
+  font-weight: bold;
+  color: #c4d6ed;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.point.left .date {
+  right: -150px;
+}
+
+.point.right .date {
+  left: -150px;
+}
+
+.point .icon {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 9px 0;
+  top: calc(50% - 20px);
+  background: transparent;
+  border: 0.3rem solid #ffffff;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.point.left .icon {
+  right: 56px;
+}
+
+.point.right .icon {
+  left: 56px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.point .content {
+  padding: 30px 90px 30px 30px;
+  position: relative;
+}
+
+.point .content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 0.3rem;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+.point.right .content::before {
+  border-radius: 50px 0px 0px 50px;
+}
+
+.point.left .content::before {
+  border-radius: 0 50px 50px 0;
+}
+
+.point.right .content {
+  padding: 30px 30px 30px 90px;
+  border-radius: 500px 0 0 500px;
+}
+
+.point .content h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: whitesmoke;
+}
+
+.point .content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: #d1d5db;
+}
+
+@media (max-width: 1024px) {
+  .timeline::after {
+    left: 90px;
+  }
+
+  .show-mobile {
+    display: initial;
+  }
+
+  .point .date {
+    position: absolute;
+    display: inline-block;
+    top: calc(50% - 22px);
+    font-size: 13px;
+    font-weight: bold;
+    color: #c4d6ed;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .point {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 30px;
+  }
+
+  .point.left {
+    text-align: left;
+  }
+
+  .point.right {
+    left: 0%;
+  }
+
+  .point.right .content::before {
+    border-radius: 50px 0px 0px 50px;
+  }
+
+  .point.left .content::before {
+    border-radius: 50px 0px 0px 50px;
+  }
+
+  .point.left::after,
+  .point.right::after {
+    left: 82px;
+  }
+
+  .point.left::before,
+  .point.right::before {
+    left: 100px;
+    border-color: transparent #006e51 transparent transparent;
+  }
+
+  .point.left .date,
+  .point.right .date {
+    right: auto;
+    left: 15px;
+  }
+
+  .point.left .icon,
+  .point.right .icon {
+    right: auto;
+    left: 146px;
+  }
+
+  .point.left .content,
+  .point.right .content {
+    padding: 30px 30px 30px 90px;
+    border-radius: 50px 0 0 50px;
+  }
+}
+
+@media (max-width: 640px) {
+  .timeline::after {
+    left: 1.5rem;
+  }
+
+  .point .date {
+    display: none;
+  }
+
+  .point {
+    width: 100%;
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+  }
+
+  .point.left {
+    text-align: left;
+  }
+
+  .point.right {
+    left: 0%;
+  }
+
+  .point.right .content::before {
+    border-radius: 24px 0 0 24px;
+  }
+
+  .point.left .content::before {
+    border-radius: 24px 0 0 24px;
+  }
+
+  .point.left::after,
+  .point.right::after {
+    left: 1rem;
+  }
+
+  .point.left::before,
+  .point.right::before {
+    left: 1.5rem;
+    border-color: transparent #006e51 transparent transparent;
+  }
+
+  .point.left .date,
+  .point.right .date {
+    right: auto;
+    left: 15px;
+  }
+
+  .point .icon {
+    width: 16px;
+    height: 16px;
+    padding: 0px;
+    top: calc(50% - 8px);
+    background: transparent;
+    border: 0.15rem solid #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    z-index: 1;
+  }
+
+  .point.left .icon,
+  .point.right .icon {
+    right: auto;
+    left: 48px;
+  }
+
+  .point.left .content,
+  .point.right .content {
+    padding: 15px 15px 15px 30px;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .point::before {
+    width: 24px;
+  }
+
+  .point .content h2 {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .point .content p {
+    line-height: 1.25rem;
+    font-size: 14px;
+  }
+
+  .point .content h3 {
+    color: whitesmoke;
+    font-size: 14px;
+    font-style: italic;
+  }
+}

@@ -1,0 +1,40 @@
+/* @keyframes slideInFromDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.topbar {
+  animation: 2s ease-out 0s 1 slideInFromDown;
+} */
+
+.hamburger {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  .line {
+    height: 2px;
+    transition: all 0.3s ease;
+  }
+}
+
+.hamburger.open {
+  span {
+    &:first-child {
+      transform: translateY(9px) rotateZ(-45deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:last-child {
+      transform: translateY(-9px) rotateZ(45deg);
+    }
+  }
+}
