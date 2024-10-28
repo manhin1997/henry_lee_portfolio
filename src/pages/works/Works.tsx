@@ -33,7 +33,7 @@ interface ModalProps {
 
 const CardList: CardProps[] = [
   {
-    img: "/work/olpp/olpp_1.webp",
+    img: import.meta.env.BASE_URL + "/work/olpp/olpp_1.webp",
     title: "PolyU Online Payment Portal",
     des: (
       <>
@@ -57,70 +57,73 @@ const CardList: CardProps[] = [
     clickInfo: {
       title: "PolyU Online Payment Portal",
       imgs: [
-        "/work/olpp/olpp_1.webp",
-        "/work/olpp/olpp_2.webp",
-        "/work/olpp/olpp_3.webp",
-        "/work/olpp/olpp_4.webp",
-        "/work/olpp/olpp_5.webp",
+        import.meta.env.BASE_URL + "/work/olpp/olpp_1.webp",
+        import.meta.env.BASE_URL + "/work/olpp/olpp_2.webp",
+        import.meta.env.BASE_URL + "/work/olpp/olpp_3.webp",
+        import.meta.env.BASE_URL + "/work/olpp/olpp_4.webp",
+        import.meta.env.BASE_URL + "/work/olpp/olpp_5.webp",
       ],
     },
   },
   {
-    img: "/work/autoinsight/auto_1.webp",
+    img: import.meta.env.BASE_URL + "/work/autoinsight/auto_1.webp",
     title: "AutoInsight",
     des: "An easy-to-use platform for e-commerce to visualize via graphs and charts without the hassle of setting up custom columns.",
     clickInfo: {
       title: "AutoInsight",
-      imgs: ["/work/autoinsight/auto_1.webp"],
+      imgs: [import.meta.env.BASE_URL + "/work/autoinsight/auto_1.webp"],
     },
   },
   {
-    img: "/work/neurogym/neurogym_home.webp",
+    img: import.meta.env.BASE_URL + "/work/neurogym/neurogym_home.webp",
     title: "Neurogym",
     des: "A gamified cognitive training platform that offered a series of interesting and interactive personalized training to help monitor user's cognitive performance.",
     clickInfo: {
       title: "Neurogym",
       imgs: [
-        "/work/neurogym/neurogym_dailymission.webp",
-        "/work/neurogym/neurogym_home.webp",
-        "/work/neurogym/neurogym_minigame.webp",
-        "/work/neurogym/neurogym_training.webp",
+        import.meta.env.BASE_URL + "/work/neurogym/neurogym_dailymission.webp",
+        import.meta.env.BASE_URL + "/work/neurogym/neurogym_home.webp",
+        import.meta.env.BASE_URL + "/work/neurogym/neurogym_minigame.webp",
+        import.meta.env.BASE_URL + "/work/neurogym/neurogym_training.webp",
       ],
     },
   },
   {
-    img: "/work/hkhs/hkhs_home.webp",
+    img: import.meta.env.BASE_URL + "/work/hkhs/hkhs_home.webp",
     title: "Hong Kong Housing Society - Elderly Care Program",
     des: "Utilizes various mini-games and activities, such as karaoke, pushing gravity balls, and solving arithmetic problems, to help volunteers interact and communicate with the elderly.",
     clickInfo: {
       title: "Hong Kong Housing Society",
       imgs: [
-        "/work/hkhs/hkhs_ballgame.webp",
-        "/work/hkhs/hkhs_home.webp",
-        "/work/hkhs/hkhs_karaoke.webp",
-        "/work/hkhs/hkhs_sumgame.webp",
+        import.meta.env.BASE_URL + "/work/hkhs/hkhs_ballgame.webp",
+        import.meta.env.BASE_URL + "/work/hkhs/hkhs_home.webp",
+        import.meta.env.BASE_URL + "/work/hkhs/hkhs_karaoke.webp",
+        import.meta.env.BASE_URL + "/work/hkhs/hkhs_sumgame.webp",
       ],
     },
   },
   {
-    img: "/work/btb/btb_dance.webp",
+    img: import.meta.env.BASE_URL + "/work/btb/btb_dance.webp",
     title: '"Beat the Beats" - a rhythm recognition game',
     des: "A rhythm game that uses motion tracking to track dance moves via an Android App.",
     clickInfo: {
       title: `"Beat the Beats" - a rhythm recognition game`,
-      imgs: ["/work/btb/btb_dance.webp", "/work/btb/btb_home.webp"],
+      imgs: [
+        import.meta.env.BASE_URL + "/work/btb/btb_dance.webp",
+        import.meta.env.BASE_URL + "/work/btb/btb_home.webp",
+      ],
     },
   },
   {
-    img: "/work/tbc/tbc_game.webp",
+    img: import.meta.env.BASE_URL + "/work/tbc/tbc_game.webp",
     title: "Monster Gem - a real-time strategy game",
     des: "A real-time strategy game that has some turn based combat element within, implemented using state machines.",
     clickInfo: {
       title: "Monster Gem - a real-time strategy game",
       imgs: [
-        "/work/tbc/tbc_game.webp",
-        "/work/tbc/tbc_home.webp",
-        "/work/tbc/tbc_win.webp",
+        import.meta.env.BASE_URL + "/work/tbc/tbc_game.webp",
+        import.meta.env.BASE_URL + "/work/tbc/tbc_home.webp",
+        import.meta.env.BASE_URL + "/work/tbc/tbc_win.webp",
       ],
     },
   },
