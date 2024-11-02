@@ -31,9 +31,11 @@ interface ModalProps {
   onOpen: () => void;
 }
 
+const getImageURL = (path: string) => import.meta.env.BASE_URL + path;
+
 const CardList: CardProps[] = [
   {
-    img: import.meta.env.BASE_URL + "/work/olpp/olpp_1.webp",
+    img: getImageURL("/work/olpp/olpp_1.webp"),
     title: "PolyU Online Payment Portal",
     des: (
       <>
@@ -57,73 +59,73 @@ const CardList: CardProps[] = [
     clickInfo: {
       title: "PolyU Online Payment Portal",
       imgs: [
-        import.meta.env.BASE_URL + "/work/olpp/olpp_1.webp",
-        import.meta.env.BASE_URL + "/work/olpp/olpp_2.webp",
-        import.meta.env.BASE_URL + "/work/olpp/olpp_3.webp",
-        import.meta.env.BASE_URL + "/work/olpp/olpp_4.webp",
-        import.meta.env.BASE_URL + "/work/olpp/olpp_5.webp",
+        getImageURL("/work/olpp/olpp_1.webp"),
+        getImageURL("/work/olpp/olpp_2.webp"),
+        getImageURL("/work/olpp/olpp_3.webp"),
+        getImageURL("/work/olpp/olpp_4.webp"),
+        getImageURL("/work/olpp/olpp_5.webp"),
       ],
     },
   },
   {
-    img: import.meta.env.BASE_URL + "/work/autoinsight/auto_1.webp",
+    img: getImageURL("/work/autoinsight/auto_1.webp"),
     title: "AutoInsight",
     des: "An easy-to-use platform for e-commerce to visualize via graphs and charts without the hassle of setting up custom columns.",
     clickInfo: {
       title: "AutoInsight",
-      imgs: [import.meta.env.BASE_URL + "/work/autoinsight/auto_1.webp"],
+      imgs: [getImageURL("/work/autoinsight/auto_1.webp")],
     },
   },
   {
-    img: import.meta.env.BASE_URL + "/work/neurogym/neurogym_home.webp",
+    img: getImageURL("/work/neurogym/neurogym_home.webp"),
     title: "Neurogym",
     des: "A gamified cognitive training platform that offered a series of interesting and interactive personalized training to help monitor user's cognitive performance.",
     clickInfo: {
       title: "Neurogym",
       imgs: [
-        import.meta.env.BASE_URL + "/work/neurogym/neurogym_dailymission.webp",
-        import.meta.env.BASE_URL + "/work/neurogym/neurogym_home.webp",
-        import.meta.env.BASE_URL + "/work/neurogym/neurogym_minigame.webp",
-        import.meta.env.BASE_URL + "/work/neurogym/neurogym_training.webp",
+        getImageURL("/work/neurogym/neurogym_dailymission.webp"),
+        getImageURL("/work/neurogym/neurogym_home.webp"),
+        getImageURL("/work/neurogym/neurogym_minigame.webp"),
+        getImageURL("/work/neurogym/neurogym_training.webp"),
       ],
     },
   },
   {
-    img: import.meta.env.BASE_URL + "/work/hkhs/hkhs_home.webp",
+    img: getImageURL("/work/hkhs/hkhs_home.webp"),
     title: "Hong Kong Housing Society - Elderly Care Program",
     des: "Utilizes various mini-games and activities, such as karaoke, pushing gravity balls, and solving arithmetic problems, to help volunteers interact and communicate with the elderly.",
     clickInfo: {
       title: "Hong Kong Housing Society",
       imgs: [
-        import.meta.env.BASE_URL + "/work/hkhs/hkhs_ballgame.webp",
-        import.meta.env.BASE_URL + "/work/hkhs/hkhs_home.webp",
-        import.meta.env.BASE_URL + "/work/hkhs/hkhs_karaoke.webp",
-        import.meta.env.BASE_URL + "/work/hkhs/hkhs_sumgame.webp",
+        getImageURL("/work/hkhs/hkhs_ballgame.webp"),
+        getImageURL("/work/hkhs/hkhs_home.webp"),
+        getImageURL("/work/hkhs/hkhs_karaoke.webp"),
+        getImageURL("/work/hkhs/hkhs_sumgame.webp"),
       ],
     },
   },
   {
-    img: import.meta.env.BASE_URL + "/work/btb/btb_dance.webp",
+    img: getImageURL("/work/btb/btb_dance.webp"),
     title: '"Beat the Beats" - a rhythm recognition game',
     des: "A rhythm game that uses motion tracking to track dance moves via an Android App.",
     clickInfo: {
       title: `"Beat the Beats" - a rhythm recognition game`,
       imgs: [
-        import.meta.env.BASE_URL + "/work/btb/btb_dance.webp",
-        import.meta.env.BASE_URL + "/work/btb/btb_home.webp",
+        getImageURL("/work/btb/btb_dance.webp"),
+        getImageURL("/work/btb/btb_home.webp"),
       ],
     },
   },
   {
-    img: import.meta.env.BASE_URL + "/work/tbc/tbc_game.webp",
+    img: getImageURL("/work/tbc/tbc_game.webp"),
     title: "Monster Gem - a real-time strategy game",
     des: "A real-time strategy game that has some turn based combat element within, implemented using state machines.",
     clickInfo: {
       title: "Monster Gem - a real-time strategy game",
       imgs: [
-        import.meta.env.BASE_URL + "/work/tbc/tbc_game.webp",
-        import.meta.env.BASE_URL + "/work/tbc/tbc_home.webp",
-        import.meta.env.BASE_URL + "/work/tbc/tbc_win.webp",
+        getImageURL("/work/tbc/tbc_game.webp"),
+        getImageURL("/work/tbc/tbc_home.webp"),
+        getImageURL("/work/tbc/tbc_win.webp"),
       ],
     },
   },

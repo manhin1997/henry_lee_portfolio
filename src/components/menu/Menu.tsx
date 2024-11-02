@@ -13,18 +13,20 @@ const MenuConst = [
   { name: "Works", href: "#works" },
 ];
 
+const ClassNames = ["md:hidden", "md:flex hidden"];
+
 const Menu: React.FC<MenuProps> = ({ menuOpen, setmenuOpen, hoverOnTop }) => {
-  return (
+  const MenuDiv = (addNames: string) => (
     <div
       className={clsx(
         `w-full h-auto right-auto
         menu fixed z-20 text-white flex flex-col top-[var(--navbar-height)] 
-        transform transition-all duration-500 
-        md:right-0 md:w-72 md:h-screen `,
+        transform transition-all duration-500 md:right-0 md:w-72 md:h-screen `,
         menuOpen && "md:translate-x-0 md:translate-y-0 translate-y-0",
         !menuOpen && "md:translate-x-full md:translate-y-0 -translate-y-96",
         !hoverOnTop && "bg-gray-800",
-        hoverOnTop && "bg-white"
+        hoverOnTop && "bg-white",
+        addNames
       )}
     >
       {MenuConst.map((item, index) => (
@@ -43,6 +45,14 @@ const Menu: React.FC<MenuProps> = ({ menuOpen, setmenuOpen, hoverOnTop }) => {
         </ul>
       ))}
     </div>
+  );
+
+  return (
+    <>
+      {ClassNames.map((item, index) => (
+        <React.Fragment key={index}>{MenuDiv(item)}</React.Fragment>
+      ))}
+    </>
   );
 };
 
