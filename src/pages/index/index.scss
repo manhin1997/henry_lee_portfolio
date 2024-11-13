@@ -21,7 +21,6 @@
   top: var(--navbar-height);
   height: calc(100vh - var(--navbar-height));
   background-color: transparent;
-  scroll-snap-type: y proximity;
   overflow: scroll;
   scroll-behavior: smooth;
 

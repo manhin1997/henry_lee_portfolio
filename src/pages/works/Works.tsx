@@ -39,21 +39,21 @@ const CardList: CardProps[] = [
     title: "PolyU Online Payment Portal",
     des: (
       <>
-        <div className="text-center">
+        <div>
           A centralized online payment platform for different university
-          applications to process payments through different Payment Channels,
-          which includes:
+          applications to process payments through different Payment Channels
         </div>
-        <div className="text-left">
-          • a web app that processes student payments
-          <br />
-          • a web app for Finance Office users to maintain and create different
-          payment events / journal postings.
-          <br />
-          • a payment gateway for processing transactions via different payment
-          methods
-          <br />
-        </div>
+        <ul className="list-disc ml-4">
+          <li>a web app that processes student payments</li>
+          <li>
+            a web app for Finance Office users to maintain and create different
+            payment events / journal postings.
+          </li>
+          <li>
+            a payment gateway for processing transactions via different payment
+            methods
+          </li>
+        </ul>
       </>
     ),
     clickInfo: {
@@ -140,7 +140,7 @@ const Works: React.FC = () => {
       <h1 className={title({ class: "title-port p-8 block" })}>
         Previous Works
       </h1>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 p-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:p-16 p-8">
         {CardList.map((card, index) => (
           <WorkCard
             key={index}
@@ -185,7 +185,7 @@ const WorkCard: React.FC<{
           {card.title}
         </div>
       </CardHeader>
-      <CardFooter className="text-small flex-grow text-">
+      <CardFooter className="text-small flex-grow pt-0 text-left">
         <p className="text-default-500 self-start">{card.des}</p>
       </CardFooter>
     </Card>
